@@ -1,0 +1,152 @@
+/* =====================================================================
+   ScaleForge IT — Central Design Tokens
+   Single source of truth for every repeated visual value.
+   Consume these via var(--sf-*). Do not hardcode raw values in components.
+   ===================================================================== */
+
+:root {
+  color-scheme: dark;
+
+  /* ---------------------------------------------------------------
+     COLOR — surfaces
+     Restrained, near-black digital environment.
+     --------------------------------------------------------------- */
+  --sf-bg: #05070a;              /* primary near-black canvas            */
+  --sf-surface: #0b1017;         /* deep surface (raised sections)       */
+  --sf-surface-2: #0f1620;       /* elevated surface / control fill      */
+  --sf-black: #000000;           /* pure black media / nav backdrop      */
+
+  /* three near-black tile variations */
+  --sf-tile-a: #0a0e14;
+  --sf-tile-b: #0d131c;
+  --sf-tile-c: #10171f;
+
+  /* light canvases (used later in light sections; documented now) */
+  --sf-white: #ffffff;
+  --sf-parchment: #f4f1ea;
+  --sf-pearl: #f8f8f6;
+
+  /* ---------------------------------------------------------------
+     COLOR — text
+     --------------------------------------------------------------- */
+  --sf-text: #111111;                       /* primary on light          */
+  --sf-text-muted: #6b7280;                 /* muted on light            */
+  --sf-text-inverse: #eef2f8;               /* primary on dark           */
+  --sf-text-inverse-muted: #9aa4b2;         /* muted on dark             */
+  --sf-text-inverse-faint: rgba(238, 242, 248, 0.55);
+
+  /* ---------------------------------------------------------------
+     COLOR — interaction (SINGLE accent family: blue only)
+     --------------------------------------------------------------- */
+  --sf-accent: #2563eb;          /* primary action                       */
+  --sf-accent-strong: #1d4ed8;   /* pressed / deeper                     */
+  --sf-accent-on-dark: #60a5fa;  /* interactive color on dark surfaces   */
+  --sf-focus: #3b82f6;           /* keyboard focus ring                  */
+  --sf-accent-glow: rgba(59, 130, 246, 0.55);
+  --sf-accent-faint: rgba(37, 99, 235, 0.14);
+
+  /* ---------------------------------------------------------------
+     COLOR — hairlines, dividers, glass
+     --------------------------------------------------------------- */
+  --sf-border: rgba(255, 255, 255, 0.10);          /* hairline on dark   */
+  --sf-border-strong: rgba(255, 255, 255, 0.18);
+  --sf-divider: rgba(255, 255, 255, 0.06);         /* soft divider       */
+  --sf-border-light: rgba(0, 0, 0, 0.10);          /* hairline on light  */
+
+  /* translucent control surface (functional glass only) */
+  --sf-glass-bg: rgba(10, 14, 20, 0.55);
+  --sf-glass-border: rgba(255, 255, 255, 0.12);
+  --sf-blur: saturate(180%) blur(20px);
+
+  /* the SINGLE approved drop shadow — product imagery ONLY */
+  --sf-product-shadow: 0 40px 80px -32px rgba(0, 0, 0, 0.75);
+
+  /* ---------------------------------------------------------------
+     TYPOGRAPHY
+     SF Pro via system stack; Inter cross-platform fallback.
+     Weight ladder: 300 / 400 / 600 / 700 only (never 500).
+     --------------------------------------------------------------- */
+  --sf-font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "SF Pro Text", "Inter", system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  --sf-font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas,
+    monospace;
+
+  --sf-weight-light: 300;
+  --sf-weight-regular: 400;
+  --sf-weight-semibold: 600;
+  --sf-weight-bold: 700;
+
+  /* fluid type scale (min → preferred → max) */
+  --sf-type-hero: clamp(2.5rem, 1.4rem + 5.4vw, 5.25rem);      /* hero display */
+  --sf-type-display-lg: clamp(2rem, 1.2rem + 3.6vw, 3.5rem);
+  --sf-type-display-md: clamp(1.6rem, 1.1rem + 2.2vw, 2.5rem);
+  --sf-type-lead: clamp(1.125rem, 1rem + 0.6vw, 1.375rem);     /* lead        */
+  --sf-type-body: 1.0625rem;                                    /* 17px body   */
+  --sf-type-caption: 0.8125rem;                                 /* 13px        */
+  --sf-type-caption-sm: 0.75rem;                                /* 12px        */
+  --sf-type-nav: 0.9375rem;                                     /* 15px nav    */
+  --sf-type-button: 1rem;                                       /* 16px button */
+  --sf-type-micro: 0.6875rem;                                   /* 11px legal  */
+
+  --sf-leading-tight: 1.05;
+  --sf-leading-snug: 1.2;
+  --sf-leading-body: 1.6;
+
+  --sf-tracking-tight: -0.022em;   /* large headlines                       */
+  --sf-tracking-snug: -0.012em;
+  --sf-tracking-normal: 0em;
+  --sf-tracking-wide: 0.04em;      /* eyebrows / nav caps                   */
+
+  /* ---------------------------------------------------------------
+     SPACING — 4px rhythm
+     --------------------------------------------------------------- */
+  --sf-space-1: 0.25rem;   /* 4  */
+  --sf-space-2: 0.5rem;    /* 8  */
+  --sf-space-3: 0.75rem;   /* 12 */
+  --sf-space-4: 1rem;      /* 16 */
+  --sf-space-6: 1.5rem;    /* 24 */
+  --sf-space-8: 2rem;      /* 32 */
+  --sf-space-12: 3rem;     /* 48 */
+  --sf-space-16: 4rem;     /* 64 */
+  --sf-space-20: 5rem;     /* 80 */
+  --sf-space-24: 6rem;     /* 96 */
+  --sf-space-30: 7.5rem;   /* 120 */
+  --sf-space-40: 10rem;    /* 160 */
+
+  /* ---------------------------------------------------------------
+     RADIUS
+     --------------------------------------------------------------- */
+  --sf-radius-sm: 8px;
+  --sf-radius-md: 14px;
+  --sf-radius-lg: 22px;    /* utility cards                              */
+  --sf-radius-pill: 999px; /* primary actions                           */
+
+  /* ---------------------------------------------------------------
+     LAYOUT
+     --------------------------------------------------------------- */
+  --sf-content-max: 1200px;
+  --sf-content-wide: 1440px;
+  --sf-content-readable: 68ch;
+  --sf-gutter: clamp(1.25rem, 0.6rem + 3vw, 2.5rem);
+  --sf-nav-height: 68px;
+
+  /* ---------------------------------------------------------------
+     DEPTH / Z-INDEX
+     --------------------------------------------------------------- */
+  --sf-z-scene: 0;
+  --sf-z-overlay: 10;
+  --sf-z-cards: 20;
+  --sf-z-nav: 40;
+  --sf-z-modal: 60;
+
+  /* ---------------------------------------------------------------
+     MOTION — sophisticated easing, low overshoot
+     --------------------------------------------------------------- */
+  --sf-ease-out: cubic-bezier(0.22, 1, 0.36, 1);       /* easeOutExpo-ish */
+  --sf-ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --sf-ease-emerge: cubic-bezier(0.16, 1, 0.3, 1);     /* controlled rise */
+  --sf-dur-fast: 160ms;
+  --sf-dur-base: 260ms;
+  --sf-dur-slow: 520ms;
+}

@@ -1,0 +1,282 @@
+/* =====================================================================
+   ScaleForge IT — Global base + reusable primitives
+   ===================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden; /* guard against horizontal overflow at any width */
+}
+
+body {
+  min-height: 100svh;
+  background-color: var(--sf-bg);
+  color: var(--sf-text-inverse);
+  font-family: var(--sf-font-sans);
+  font-size: var(--sf-type-body);
+  font-weight: var(--sf-weight-regular);
+  line-height: var(--sf-leading-body);
+  letter-spacing: var(--sf-tracking-normal);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+  isolation: isolate;
+}
+
+img,
+picture,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: var(--sf-weight-semibold);
+  line-height: var(--sf-leading-tight);
+  letter-spacing: var(--sf-tracking-tight);
+}
+
+/* ---------------------------------------------------------------------
+   Accessibility helpers
+   --------------------------------------------------------------------- */
+
+/* Visible keyboard focus everywhere; never removed. */
+:focus-visible {
+  outline: 2px solid var(--sf-focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+/* Only suppress the default ring for mouse users (focus-visible handles kbd) */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.sf-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sf-skip-link {
+  position: absolute;
+  left: var(--sf-space-4);
+  top: -100px;
+  z-index: var(--sf-z-modal);
+  padding: var(--sf-space-3) var(--sf-space-4);
+  background: var(--sf-surface-2);
+  color: var(--sf-text-inverse);
+  border: 1px solid var(--sf-border-strong);
+  border-radius: var(--sf-radius-sm);
+  transition: top var(--sf-dur-fast) var(--sf-ease-out);
+}
+.sf-skip-link:focus {
+  top: var(--sf-space-4);
+}
+
+/* ---------------------------------------------------------------------
+   Reusable typography primitives
+   --------------------------------------------------------------------- */
+.sf-eyebrow {
+  font-size: var(--sf-type-caption);
+  font-weight: var(--sf-weight-semibold);
+  letter-spacing: var(--sf-tracking-wide);
+  text-transform: uppercase;
+  color: var(--sf-accent-on-dark);
+}
+
+.sf-lead {
+  font-size: var(--sf-type-lead);
+  font-weight: var(--sf-weight-light);
+  line-height: 1.5;
+  letter-spacing: var(--sf-tracking-snug);
+}
+
+/* ---------------------------------------------------------------------
+   Buttons — one geometry system, blue-only interaction
+   Variants: primary (pill), secondary (outline pill), dark (utility),
+             pearl (light capsule), icon (circular)
+   States: default / :active (scale .95) / :focus-visible / :disabled
+   --------------------------------------------------------------------- */
+.sf-btn {
+  --_bg: transparent;
+  --_fg: var(--sf-text-inverse);
+  --_bd: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sf-space-2);
+  min-height: 44px; /* ≥44px touch target */
+  padding: 0 var(--sf-space-6);
+  font-size: var(--sf-type-button);
+  font-weight: var(--sf-weight-semibold);
+  letter-spacing: var(--sf-tracking-snug);
+  line-height: 1;
+  color: var(--_fg);
+  background-color: var(--_bg);
+  border: 1px solid var(--_bd);
+  border-radius: var(--sf-radius-pill);
+  transition:
+    background-color var(--sf-dur-base) var(--sf-ease-out),
+    border-color var(--sf-dur-base) var(--sf-ease-out),
+    color var(--sf-dur-base) var(--sf-ease-out),
+    transform var(--sf-dur-fast) var(--sf-ease-out),
+    opacity var(--sf-dur-base) var(--sf-ease-out);
+  text-align: center;
+  white-space: nowrap;
+}
+.sf-btn:active {
+  transform: scale(0.95);
+}
+.sf-btn:disabled,
+.sf-btn[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.sf-btn:disabled:active,
+.sf-btn[aria-disabled="true"]:active {
+  transform: none;
+}
+
+.sf-btn--primary {
+  --_bg: var(--sf-accent);
+  --_fg: #ffffff;
+  --_bd: var(--sf-accent);
+}
+.sf-btn--primary:hover:not(:disabled):not([aria-disabled="true"]) {
+  --_bg: var(--sf-accent-strong);
+  --_bd: var(--sf-accent-strong);
+}
+
+.sf-btn--secondary {
+  --_bg: transparent;
+  --_fg: var(--sf-text-inverse);
+  --_bd: var(--sf-border-strong);
+}
+.sf-btn--secondary:hover:not(:disabled):not([aria-disabled="true"]) {
+  --_bd: var(--sf-accent-on-dark);
+  --_fg: #ffffff;
+}
+
+.sf-btn--dark {
+  --_bg: var(--sf-surface-2);
+  --_fg: var(--sf-text-inverse);
+  --_bd: var(--sf-border);
+}
+.sf-btn--dark:hover:not(:disabled):not([aria-disabled="true"]) {
+  --_bd: var(--sf-border-strong);
+}
+
+.sf-btn--pearl {
+  --_bg: var(--sf-pearl);
+  --_fg: #111111;
+  --_bd: var(--sf-pearl);
+}
+
+.sf-btn--sm {
+  min-height: 40px;
+  padding: 0 var(--sf-space-4);
+  font-size: var(--sf-type-nav);
+}
+
+/* circular icon control */
+.sf-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--sf-radius-pill);
+  border: 1px solid var(--sf-border);
+  background: var(--sf-surface-2);
+  color: var(--sf-text-inverse);
+  transition:
+    border-color var(--sf-dur-base) var(--sf-ease-out),
+    background-color var(--sf-dur-base) var(--sf-ease-out),
+    transform var(--sf-dur-fast) var(--sf-ease-out);
+}
+.sf-icon-btn:hover {
+  border-color: var(--sf-border-strong);
+}
+.sf-icon-btn:active {
+  transform: scale(0.95);
+}
+
+/* text links */
+.sf-link {
+  color: var(--sf-accent);
+  font-weight: var(--sf-weight-semibold);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sf-space-1);
+  transition: color var(--sf-dur-base) var(--sf-ease-out);
+}
+.sf-link:hover {
+  color: var(--sf-accent-strong);
+}
+.sf-link--on-dark {
+  color: var(--sf-accent-on-dark);
+}
+.sf-link--on-dark:hover {
+  color: #93c5fd;
+}
+
+/* ---------------------------------------------------------------------
+   Global reduced-motion: neutralise CSS transitions/animations.
+   (3D scene motion is additionally gated in JS.)
+   --------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

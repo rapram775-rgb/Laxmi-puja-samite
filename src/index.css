@@ -1,0 +1,4 @@
+/* Entry stylesheet — pulls in the central token source, then globals.
+   @import order matters: tokens must load before anything consumes them. */
+@import "./styles/tokens.css";
+@import "./styles/global.css";
