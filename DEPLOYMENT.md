@@ -1,24 +1,9 @@
-# ScaleForge IT — Deployment
+# Vercel deployment
 
-## GitHub
+1. Upload/replace the project files in the GitHub `main` branch.
+2. Confirm `package.json`, `package-lock.json`, `vite.config.js`, `index.html`, `src/main.jsx`, `src/styles.css`, and `src/data/content.js` are in the repository root/project root.
+3. Redeploy the Vercel project.
+4. The project uses `npm ci` for installation and `npm run build` for production.
+5. Do not add `tsconfig.node.json` or a `tsc -b` build command; the previous deployment failure came from that TypeScript build step.
 
-1. Extract this ZIP.
-2. Upload the **contents** of the extracted folder to the root of the GitHub repository. Do not upload the ZIP as the only repository file.
-3. Make sure `package.json` and `package-lock.json` are in the repository root.
-4. GitHub Actions should run `npm ci` + `npm run build`. TypeScript checking is available separately with `npm run typecheck`.
-
-## Vercel
-
-Use the existing Vercel project connected to the repository.
-
-- Framework Preset: Vite
-- Install Command: `npm ci`
-- Build Command: `npm run build`
-- Output Directory: `dist`
-- Node.js: 22.x
-
-If Vercel shows **Deployment rate limited — retry in 24 hours**, that is an account/project deployment limit, not an application-code build error. Do not create duplicate Vercel projects to work around it.
-
-## Location map
-
-The FIND US IN POKHARA section uses a normal Google Maps embed for the ScaleForge IT location and does not apply a dark/inverting CSS filter over the map.
+All content marked `[ ... ]` is intentionally a placeholder for the committee's final details.

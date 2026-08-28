@@ -1,11 +1,36 @@
-export const content={
- hero:{title:'श्री लक्ष्मी पूजा महोत्सव',tagline:'श्रद्धा, समृद्धि र एकताको पवित्र उत्सव',date:'मिति: [यहाँ मिति राख्नुहोस्]',location:'स्थान: [यहाँ स्थान राख्नुहोस्]'},
- about:{title:'हाम्रो पूजा बारे',text:'लक्ष्मी पूजा हाम्रो धार्मिक तथा सांस्कृतिक परम्पराको महत्वपूर्ण उत्सव हो। समुदायलाई एकताबद्ध गर्दै श्रद्धा, सेवा, परम्परा र सहकार्यको भावना अभिवृद्धि गर्ने उद्देश्यले यो पूजा आयोजना गरिन्छ।'},
- committee:[['अध्यक्ष','[नाम राख्नुहोस्]'],['उपाध्यक्ष','[नाम राख्नुहोस्]'],['सचिव','[नाम राख्नुहोस्]'],['कोषाध्यक्ष','[नाम राख्नुहोस्]'],['सदस्य','[नाम राख्नुहोस्]']],
- donor:{name:'[दाता परिवारको नाम]',title:'श्री लक्ष्मी मूर्ति दाता',text:'श्री लक्ष्मी माताको पवित्र मूर्ति सहयोग गर्नुहुने दाता परिवारप्रति हार्दिक आभार।'},
- program:[['०७:०० बजे','पूजा आरम्भ','पूजा तथा धार्मिक विधिको शुभारम्भ'],['०९:०० बजे','लक्ष्मी पूजा','श्री लक्ष्मी माताको विशेष पूजा'],['११:०० बजे','आरती','सामूहिक आरती तथा प्रार्थना'],['१२:०० बजे','प्रसाद वितरण','भक्तजनहरूलाई प्रसाद वितरण'],['१५:०० बजे','सांस्कृतिक कार्यक्रम','समुदायको सांस्कृतिक प्रस्तुति'],['१८:०० बजे','समापन','धन्यवाद तथा कार्यक्रम समापन']],
- donation:{account:'[खाता धारकको नाम]',bank:'[बैंकको नाम]',number:'[खाता नम्बर]',wallet:'[Digital Wallet]',phone:'[फोन नम्बर]'},
- memories:['२०८२','२०८१','२०८०'],
- founder:{name:'[संस्थापकको नाम]',title:'समिति संस्थापक',bio:'धर्म, संस्कृति र समुदायलाई एकताबद्ध गर्दै हाम्रो परम्परालाई पुस्तौंदेखि जीवित राख्न उहाँको योगदान महत्वपूर्ण रहेको छ।',quote:'धर्म, संस्कृति र समुदायलाई एकताबद्ध गर्दै हाम्रो परम्परालाई पुस्तौंदेखि जीवित राख्नु नै हाम्रो उद्देश्य हो।'},
- contact:{address:'[पूरा ठेगाना]',phone:'[सम्पर्क नम्बर]',email:'[इमेल]',map:'[Google Map Embed यहाँ राख्नुहोस्]'}
+export const content = {
+  hero: {
+    title: 'Shree Laxmi Puja Mahotsav',
+    tagline: 'Faith, prosperity, tradition and community together.',
+    date: '[Festival Date]',
+    location: '[Festival Location]'
+  },
+  about: {
+    text: 'Shree Laxmi Puja Committee brings families and the wider community together through worship, cultural traditions, service and shared celebration. The committee works to preserve the spirit of Laxmi Puja while creating a welcoming and meaningful festival for every generation.'
+  },
+  committee: [
+    ['Chairperson', '[Committee Member Name]'], ['Vice Chairperson', '[Committee Member Name]'],
+    ['Secretary', '[Committee Member Name]'], ['Treasurer', '[Committee Member Name]'],
+    ['Coordinator', '[Committee Member Name]'], ['Joint Secretary', '[Committee Member Name]'],
+    ['Cultural Coordinator', '[Committee Member Name]'], ['Puja Coordinator', '[Committee Member Name]'],
+    ['Member', '[Committee Member Name]'], ['Member', '[Committee Member Name]']
+  ],
+  donors: [
+    ['Laxmi', '[Donor Name]'], ['Ganesh', '[Donor Name]'], ['Saraswati', '[Donor Name]'], ['Shiva', '[Donor Name]'], ['Parvati', '[Donor Name]'],
+    ['Vishnu', '[Donor Name]'], ['Durga', '[Donor Name]'], ['Krishna', '[Donor Name]'], ['Hanuman', '[Donor Name]'], ['Kali', '[Donor Name]'],
+    ['Ram', '[Donor Name]'], ['Sita', '[Donor Name]'], ['Surya', '[Donor Name]'], ['Shani', '[Donor Name]'], ['Saraswati', '[Donor Name]']
+  ],
+  program: [
+    ['Day 01', 'Preparation & Purification', 'Temple and puja space preparation, cleaning and sacred arrangements.'],
+    ['Day 02', 'Kalash Sthapana', 'Traditional kalash installation and opening rituals for the festival.'],
+    ['Day 03', 'Community Prayer', 'Collective prayer, devotional gathering and preparation for the main puja.'],
+    ['Day 04', 'Laxmi Puja', 'Main worship of Goddess Laxmi with family and community participation.'],
+    ['Day 05', 'Aarti & Prasad', 'Collective aarti, blessings and prasad distribution for devotees.'],
+    ['Day 06', 'Cultural Evening', 'Music, cultural presentations and community celebration.'],
+    ['Day 07', 'Closing & Gratitude', 'Final prayer, volunteer appreciation and closing of the Mahotsav.']
+  ],
+  donation: { account: '[Account Holder Name]', bank: '[Bank Name]', number: '[Account Number]', wallet: '[Digital Wallet]', phone: '[Contact Number]' },
+  memories: ['2082 / 2025', '2081 / 2024', '2080 / 2023', '2079 / 2022', '2078 / 2021', '2077 / 2020', '2076 / 2019', '2075 / 2018', '2074 / 2017'],
+  founder: { name: '[Founder Name]', bio: 'The founder established the Shree Laxmi Puja Committee with the vision of bringing families together, preserving cultural traditions and creating a shared platform for worship, service and community participation. This section can later be updated with the founder’s full story, achievements and personal message.' },
+  contact: { address: '[Full Address]', phone: '[Contact Number]', email: '[Email Address]' }
 };

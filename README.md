@@ -1,42 +1,20 @@
-# ScaleForge IT
+# Shree Laxmi Puja Committee
 
-ScaleForge IT website built with React, TypeScript, Vite, and React Three Fiber.
+A clean, responsive one-page website for the Shree Laxmi Puja Mahotsav.
 
-## Requirements
+## Included sections
+- Home / hero with the supplied Laxmi logo
+- About Our Puja
+- Our Committee — 10 members, 5 per row on desktop
+- Our Donors — 15 deity-specific donor cards, 10 initially visible and 15 after See More
+- Our Program — 7-day schedule
+- Make a Donation — donor detail form + QR placeholder + donor list / expense modals
+- Memories — previous-year photo placeholders
+- Founder — founder photo placeholder and story
+- Find Us / Contact — map placeholder, contact cards and message form
 
-- Node.js 22.x (Node 20.19+ is also supported by the project dependencies)
-- npm 10+
+## Photo policy
+No unrelated stock photos are used. Every future image area is intentionally labeled **Photos** so official committee photos can be added later.
 
-## Local development
-
-```bash
-npm ci
-npm run dev
-```
-
-## Production build
-
-```bash
-npm run build
-npm run preview
-```
-
-The production output is generated in `dist/`.
-
-## GitHub / Vercel
-
-The repository includes a GitHub Actions workflow at `.github/workflows/ci.yml` that installs dependencies with the lockfile and runs the production build on every push/PR to `main` or `master`.
-
-For Vercel:
-
-- Framework: Vite
-- Install command: `npm ci`
-- Build command: `npm run build`
-- Output directory: `dist`
-- Node.js: 22.x
-
-## Contact details used by the website
-
-- Phone / WhatsApp: +977 9762770837
-- Email: scaleforgeit@gmail.com
-- Location: Bhandari Residence, 6X6H+346, Pokhara 33700, Nepal
+## Deployment
+This is a Vite + React project. The production command is `npm run build` and the Vercel configuration uses the same command.
