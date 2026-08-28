@@ -6,6 +6,18 @@ import './styles.css';
 const logo = '/assets/laxmi-logo.png';
 const founderPhoto = '/assets/founder-jairam-yadav.png';
 
+const memoryPhotos = [
+  '/assets/memories/1787957118914.jpg',
+  '/assets/memories/1787957125891.jpg',
+  '/assets/memories/1787957129891.jpg',
+  '/assets/memories/1787957147391.jpg',
+  '/assets/memories/1787957362934.jpg',
+  '/assets/memories/1787957643024.jpg',
+  '/assets/memories/1787957805723.jpg',
+  '/assets/memories/1787957814969.jpg',
+  '/assets/memories/1787957823242.jpg'
+];
+
 function Logo({ footer = false }) {
   return <a className={`brand ${footer ? 'brandFooter' : ''}`} href="#home"><img src={logo} alt="Shree Laxmi Puja Committee logo"/><span>Shree Laxmi <b>Puja Committee</b></span></a>;
 }
@@ -32,6 +44,7 @@ function App() {
   const [expenseOpen, setExpenseOpen] = useState(false);
   const [showAllDonors, setShowAllDonors] = useState(false);
   const [formSent, setFormSent] = useState(false);
+  const [showAllMemories, setShowAllMemories] = useState(false);
   const visibleDonors = useMemo(() => showAllDonors ? c.donors : c.donors.slice(0,10), [showAllDonors]);
 
   return <>
@@ -52,7 +65,7 @@ function App() {
 
       <Section id="donation" eyebrow="Support • Contribute • Transparency" title="Make a Donation" subtitle="Choose your preferred method and share your donor details with the committee."><div className="donationGrid"><div className="donationFormCard"><span className="goldLabel">Donor Details</span><h3>Send Your Contribution Details</h3><p className="muted">After making your payment, submit the details below so your contribution can be recorded.</p><form onSubmit={e => {e.preventDefault();setFormSent(true)}}><label>Donor Name<input required placeholder="Your full name"/></label><label>Phone / Email<input required placeholder="Phone number or email"/></label><label>Donation Amount<input placeholder="Amount"/></label><label>Payment Method<select defaultValue=""><option value="" disabled>Select payment method</option><option>Bank Transfer</option><option>Digital Wallet</option><option>Cash</option><option>Other</option></select></label><label>Message / Reference<textarea placeholder="Transaction reference or message"></textarea></label><button className="btn gold full" type="submit">{formSent ? 'Details Submitted ✓' : 'Send Details'} <span className="arrow">→</span></button></form></div><div className="qrCard"><div className="qrFrame"><div className="qrPlaceholder"><span>QR</span><small>PHOTO / QR<br/>PLACEHOLDER</small></div></div><span className="goldLabel">Scan & Support</span><h3>Contribute to the Puja</h3><p>Replace this QR placeholder with the committee’s official bank or digital-wallet QR.</p><div className="bankDetails"><div><span>Account Holder</span><b>{c.donation.account}</b></div><div><span>Bank</span><b>{c.donation.bank}</b></div><div><span>Account / Wallet</span><b>{c.donation.number}</b></div></div></div></div><div className="donationButtons"><button className="btn gold" onClick={() => setDonorOpen(true)}>Donor Name List <span className="arrow">→</span></button><button className="btn outlineDark" onClick={() => setExpenseOpen(true)}>View Puja Expense <span className="arrow">→</span></button></div></Section>
 
-      <Section id="memories" eyebrow="Memories • Moments • History" title="Memories" subtitle="A gallery for photos from previous years of the Mahotsav."><div className="memoryGrid">{c.memories.map((year,i)=><article className="memoryCard" key={i}><Photo label="Photos"/><div><span>Festival Memory</span><h3>{year}</h3></div></article>)}</div></Section>
+      <Section id="memories" eyebrow="Memories • Moments • History" title="Memories" subtitle="A collection of moments from our Puja celebrations and community gatherings."><div className="memoryGrid">{memoryPhotos.slice(0, showAllMemories ? memoryPhotos.length : 6).map((image,i)=><article className="memoryCard" key={image}><img src={image} alt={`Shree Laxmi Puja Committee memory ${i + 1}`} loading={i < 3 ? 'eager' : 'lazy'}/></article>)}</div><div className="centerAction"><button className="btn outlineDark" onClick={() => setShowAllMemories(!showAllMemories)}>{showAllMemories ? 'Show Less' : 'See More'} <span className={`arrow ${showAllMemories ? 'rotate' : ''}`}>⌄</span></button></div></Section>
 
       <Section id="founder" eyebrow="Vision • Contribution • Leadership" title="Founder" subtitle="The story behind the beginning of the Shree Laxmi Puja Committee."><div className="founderGrid"><div className="founderPhoto"><img src={founderPhoto} alt="Jairam Yadav, founder"/><div className="founderSeal">Founder<br/><b>Story</b></div></div><div className="founderCopy"><span className="eyebrow">The Beginning</span><span className="founderRole">Founder Name</span><h3>{c.founder.name}</h3><div className="founderStory">{c.founder.bio.map((paragraph,i)=><p key={i}>{paragraph}</p>)}</div><blockquote>“This is not just Laxmi Puja—it is our memory, our tradition, and a story that belongs to our entire village.”</blockquote><div className="signature">— Jairam Yadav · Founder’s Story</div></div></div></Section>
 
