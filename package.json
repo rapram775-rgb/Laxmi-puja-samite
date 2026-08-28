@@ -1,14 +1,13 @@
 {
-  "name": "shree-laxmi-puja-committee",
+  "name": "scaleforge-it",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc -b && vite build",
     "lint": "oxlint src",
-    "preview": "vite preview",
-    "typecheck": "tsc -b"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.8",

@@ -5,7 +5,7 @@
 1. Extract this ZIP.
 2. Upload the **contents** of the extracted folder to the root of the GitHub repository. Do not upload the ZIP as the only repository file.
 3. Make sure `package.json` and `package-lock.json` are in the repository root.
-4. GitHub Actions should run `npm ci` + `npm run build`. TypeScript checking is available separately with `npm run typecheck`.
+4. GitHub Actions will run `.github/workflows/ci.yml` and verify `npm ci` + `npm run build`.
 
 ## Vercel
 
