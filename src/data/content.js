@@ -16,9 +16,21 @@ export const content = {
     ['Member', '[Committee Member Name]'], ['Member', '[Committee Member Name]']
   ],
   donors: [
-    ['Laxmi', '[Donor Name]'], ['Ganesh', '[Donor Name]'], ['Saraswati', '[Donor Name]'], ['Shiva', '[Donor Name]'], ['Parvati', '[Donor Name]'],
-    ['Vishnu', '[Donor Name]'], ['Durga', '[Donor Name]'], ['Krishna', '[Donor Name]'], ['Hanuman', '[Donor Name]'], ['Kali', '[Donor Name]'],
-    ['Ram', '[Donor Name]'], ['Sita', '[Donor Name]'], ['Surya', '[Donor Name]'], ['Shani', '[Donor Name]'], ['Saraswati', '[Donor Name]']
+    ['Saraswati', '[Donor Name 01]', '/assets/donors/saraswati-01.jpg'],
+    ['Saraswati', '[Donor Name 02]', '/assets/donors/saraswati-02.jpg'],
+    ['Ganesh', '[Donor Name 03]', '/assets/donors/ganesh-01.png'],
+    ['Vishnu', '[Donor Name 04]', '/assets/donors/vishnu-01.jpg'],
+    ['Shiva & Parvati', '[Donor Name 05]', '/assets/donors/shiva-parvati-01.png'],
+    ['Shani', '[Donor Name 06]', '/assets/donors/shani-01.jpg'],
+    ['Ganesh', '[Donor Name 07]', '/assets/donors/ganesh-02.png'],
+    ['Krishna', '[Donor Name 08]', '/assets/donors/krishna-01.jpg'],
+    ['Laxmi', '[Donor Name 09]', '/assets/donors/laxmi-01.jpg'],
+    ['Hanuman', '[Donor Name 10]', '/assets/donors/hanuman-01.jpg'],
+    ['Durga', '[Donor Name 11]', '/assets/donors/durga-01.jpg'],
+    ['Ram', '[Donor Name 12]', '/assets/donors/ram-01.jpg'],
+    ['Shiva', '[Donor Name 13]', '/assets/donors/shiva-01.png'],
+    ['Kali', '[Donor Name 14]', '/assets/donors/kali-01.jpg'],
+    ['Laxmi', '[Donor Name 15]', '/assets/donors/laxmi-02.png'],
   ],
   program: [
     ['Day 01', 'Preparation & Purification', 'Temple and puja space preparation, cleaning and sacred arrangements.'],
