@@ -43,6 +43,17 @@ export const content = {
   ],
   donation: { account: '[Account Holder Name]', bank: '[Bank Name]', number: '[Account Number]', wallet: '[Digital Wallet]', phone: '[Contact Number]' },
   memories: ['2082 / 2025', '2081 / 2024', '2080 / 2023', '2079 / 2022', '2078 / 2021', '2077 / 2020', '2076 / 2019', '2075 / 2018', '2074 / 2017'],
-  founder: { name: '[Founder Name]', bio: 'The founder established the Shree Laxmi Puja Committee with the vision of bringing families together, preserving cultural traditions and creating a shared platform for worship, service and community participation. This section can later be updated with the founder’s full story, achievements and personal message.' },
+  founder: {
+    name: 'Jairam Yadav',
+    bio: [
+      'There was a time when we celebrated Laxmi Puja under a small tent, collecting donations from our own village and celebrating with whatever we had.',
+      'It was never just a puja; it was a feeling, a togetherness, and a kind of peace that is hard to explain.',
+      'A few village boys came together, formed a small committee, and started this journey with a simple dream.',
+      'Years passed, and that small beginning slowly became a tradition—something that gave our village its own identity.',
+      'Today, even though I cannot be there in person, those memories still feel alive in my heart.',
+      'I only wish that our younger brothers carry this tradition forward with the same love, unity, and spirit.',
+      'Because this is not just Laxmi Puja—it is our memory, our tradition, and a story that belongs to our entire village.'
+    ]
+  },
   contact: { address: '[Full Address]', phone: '[Contact Number]', email: '[Email Address]' }
 };
