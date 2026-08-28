@@ -51,5 +51,5 @@ export const content = {
       'I only hope that our younger brothers continue this tradition with the same love, unity, and spirit, because Laxmi Puja is not just a celebration—it is our memory, our tradition, and a story that belongs to our entire village.'
     ]
   },
-  contact: { address: '[Full Address]', phone: '[Contact Number]', email: '[Email Address]' }
+  contact: { address: 'Rajbiraj - 1, Rampur, Saptari, Nepal', phone: '9705422807', email: '[Email Address]' }
 };
