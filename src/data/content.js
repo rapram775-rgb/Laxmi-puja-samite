@@ -46,13 +46,9 @@ export const content = {
   founder: {
     name: 'Jairam Yadav',
     bio: [
-      'There was a time when we celebrated Laxmi Puja under a small tent, collecting donations from our own village and celebrating with whatever we had.',
-      'It was never just a puja; it was a feeling, a togetherness, and a kind of peace that is hard to explain.',
-      'A few village boys came together, formed a small committee, and started this journey with a simple dream.',
-      'Years passed, and that small beginning slowly became a tradition—something that gave our village its own identity.',
-      'Today, even though I cannot be there in person, those memories still feel alive in my heart.',
-      'I only wish that our younger brothers carry this tradition forward with the same love, unity, and spirit.',
-      'Because this is not just Laxmi Puja—it is our memory, our tradition, and a story that belongs to our entire village.'
+      'There was a time when Laxmi Puja in our village began under a small tent, with a few village boys coming together, collecting donations from our own people, and celebrating with whatever we had. It was never just a puja—it was a feeling of togetherness, happiness, and a peace that words could hardly explain.',
+      'What started as a simple dream slowly grew into a tradition, giving our village its own identity and creating memories that still live in our hearts. Today, even though I cannot be there in person, those beautiful moments remain close to me.',
+      'I only hope that our younger brothers continue this tradition with the same love, unity, and spirit, because Laxmi Puja is not just a celebration—it is our memory, our tradition, and a story that belongs to our entire village.'
     ]
   },
   contact: { address: '[Full Address]', phone: '[Contact Number]', email: '[Email Address]' }
