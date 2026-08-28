@@ -41,7 +41,7 @@ export const content = {
     ['Day 06', 'Cultural Evening', 'Music, cultural presentations and community celebration.'],
     ['Day 07', 'Closing & Gratitude', 'Final prayer, volunteer appreciation and closing of the Mahotsav.']
   ],
-  donation: { account: '[Account Holder Name]', bank: '[Bank Name]', number: '[Account Number]', wallet: '[Digital Wallet]', phone: '[Contact Number]' },
+  donation: { account: 'Devendra Yadav', bank: 'ewes', number: '9705422807', wallet: '9705422807', phone: '9705422807' },
   memories: ['2082 / 2025', '2081 / 2024', '2080 / 2023', '2079 / 2022', '2078 / 2021', '2077 / 2020', '2076 / 2019', '2075 / 2018', '2074 / 2017'],
   founder: {
     name: 'Jairam Yadav',

@@ -15,3 +15,6 @@
 .contactPhone{color:#655b55;transition:.2s}
 .contactPhone:hover{color:var(--gold)}
 @media(max-width:800px){.mapPlaceholder{height:400px}.mapOverlay{left:12px;right:12px;max-width:none}.mapOverlay strong{font-size:16px}}
+
+.proofUpload input[type="file"]{padding:9px;border-style:dashed;background:#fffaf5;cursor:pointer}.uploadHint{font-size:10px;color:var(--muted);font-weight:500}.proofPreview{display:flex;align-items:center;gap:12px;padding:10px;border:1px solid var(--line);border-radius:12px;background:#fffaf5}.proofPreview img{width:58px;height:58px;object-fit:cover;border-radius:8px;border:1px solid rgba(215,169,27,.35)}.proofPreview span{font-size:11px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.donationQr{display:block;width:230px;height:230px;object-fit:contain}.qrCard .qrFrame{box-shadow:0 8px 25px rgba(0,0,0,.12)}
+@media(max-width:560px){.donationQr{width:190px;height:190px}}
