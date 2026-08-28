@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { createRoot } from 'react-dom/client';
 import {
   ArrowRight, CalendarDays, Check, ChevronDown, Copy, Heart, Landmark,
   Mail, MapPin, Menu, Phone, Quote, Sparkles, Users, X
@@ -60,7 +61,7 @@ function Navbar() {
 function Hero() {
   return (
     <section id="home" className="hero">
-      <video className="heroVideo" autoPlay muted loop playsInline preload="metadata" aria-hidden="true">
+      <video className="heroVideo" autoPlay muted loop playsInline preload="metadata" poster="/assets/laxmi-hero-golden.webp" aria-hidden="true">
         <source src={heroVideo} type="video/mp4" />
       </video>
       <div className="heroShade" />
