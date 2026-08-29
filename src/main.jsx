@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { content as c } from './data/content';
 import './styles.css';
@@ -50,7 +50,31 @@ function App() {
   const [proofName, setProofName] = useState('');
   const [proofPreview, setProofPreview] = useState('');
   const [proofError, setProofError] = useState('');
+  const [showFloatingActions, setShowFloatingActions] = useState(false);
   const visibleDonors = useMemo(() => showAllDonors ? c.donors : c.donors.slice(0,10), [showAllDonors]);
+
+  useEffect(() => {
+    const onScroll = () => setShowFloatingActions(window.scrollY > 80);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const openWhatsApp = () => {
+    window.open('https://wa.me/9779705422807', '_blank', 'noopener,noreferrer');
+  };
+
+  const callCommittee = () => {
+    window.location.href = 'tel:+9779705422807';
+  };
+
+  const backToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const WhatsAppIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.52 3.48A11.83 11.83 0 0 0 12.08 0C5.54 0 .22 5.32.22 11.87c0 2.09.55 4.13 1.59 5.92L.12 24l6.35-1.66a11.86 11.86 0 0 0 5.61 1.43h.01c6.54 0 11.86-5.32 11.86-11.87 0-3.17-1.23-6.15-3.43-8.42ZM12.09 21.8h-.01a9.88 9.88 0 0 1-5.04-1.38l-.36-.21-3.77.98 1.01-3.67-.23-.38a9.85 9.85 0 0 1-1.51-5.27C2.18 6.44 6.62 2 12.08 2c2.65 0 5.15 1.03 7.02 2.9a9.85 9.85 0 0 1 2.91 7.01c0 5.47-4.45 9.89-9.92 9.89Zm5.43-7.4c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.69.15-.2.3-.79.97-.97 1.17-.18.2-.36.23-.66.08-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.5-1.76-1.68-2.06-.18-.3-.02-.46.13-.61.14-.14.3-.36.45-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.69-1.65-.94-2.26-.25-.6-.5-.52-.69-.53h-.58c-.2 0-.53.08-.81.38-.28.3-1.06 1.04-1.06 2.54s1.09 2.95 1.24 3.15c.15.2 2.14 3.27 5.19 4.59.73.32 1.3.51 1.74.65.73.23 1.39.2 1.91.12.58-.09 1.77-.72 2.02-1.42.25-.69.25-1.29.18-1.42-.08-.13-.28-.2-.58-.35Z"/></svg>;
+  const PhoneIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2Z"/></svg>;
+  const UpIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 4.5 4.75 11.75l1.5 1.5L11 8.5V20h2V8.5l4.75 4.75 1.5-1.5L12 4.5Z"/></svg>;
 
   return <>
     <Navbar/>
@@ -77,7 +101,11 @@ function App() {
       <Section id="contact" eyebrow="CONTACT • LOCATION • PARTICIPATION" title="Find Us" subtitle="Visit the festival, contact the committee or send a message."><div className="contactGrid"><div><div className="mapPlaceholder"><iframe title="Shree Laxmi Puja Committee location" src="https://www.google.com/maps?q=Rajbiraj%20-1%20Rampur%2C%20Saptari%2C%20Nepal&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen></iframe><div className="mapOverlay"><strong>Shree Laxmi Puja Committee</strong><span>Rajbiraj - 1, Rampur, Saptari, Nepal</span><a className="mapLink" href="https://maps.app.goo.gl/DzUMSqZmYmLfy8S8A" target="_blank" rel="noreferrer">Get Directions <span className="arrow">↗</span></a></div></div></div><div className="contactSide"><div className="contactCards"><div><span className="iconBox"><span className="miniIcon">⌖</span></span><p><b>Address</b>{c.contact.address}</p></div><div><span className="iconBox"><span className="miniIcon">☎</span></span><p><b>Phone</b><a className="contactPhone" href={`tel:${c.contact.phone}`}>{c.contact.phone}</a></p></div><div><span className="iconBox"><span className="miniIcon">◷</span></span><p><b>Opening / Contact Hours</b>Sun – Sat: 10AM – 10PM</p></div></div><form className="contactForm" onSubmit={e => {e.preventDefault(); const fd = new FormData(e.currentTarget); const name = fd.get('name') || 'Hello'; const contact = fd.get('contact') || ''; const message = fd.get('message') || ''; const text = `Hello Shree Laxmi Puja Committee,\n\nName: ${name}\nPhone / Email: ${contact}\nMessage: ${message}`; window.open(`https://wa.me/9779705422807?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');}}><input name="name" required placeholder="Name"/><input name="contact" required placeholder="Phone / Email"/><textarea name="message" required placeholder="Message"></textarea><button className="btn gold" type="submit">Send Message <span className="arrow">→</span></button></form><div className="socialRow"><span>Contact us on WhatsApp</span><a href="https://wa.me/9779705422807" target="_blank" rel="noreferrer" aria-label="WhatsApp">◔</a><a href="tel:+9779705422807" aria-label="Phone">☎</a></div></div></div></Section>
     </main>
     <footer><div className="container footerGrid"><div><Logo footer/><p>Faith, prosperity and community — together in one sacred celebration.</p></div><div><h4>Quick Navigation</h4><a href="#about">About</a><a href="#committee">Committee</a><a href="#program">Program</a><a href="#donation">Donation</a><a href="#contact">Contact</a></div><div><h4>Contact</h4><p>{c.contact.phone}</p><p>{c.contact.email}</p><p>{c.contact.address}</p></div></div><div className="copyright">© 2026 Shree Laxmi Puja Committee · All rights reserved.</div></footer>
-    <div className="floatingActions"><a href="#contact" title="WhatsApp">◔</a><a href="#contact" title="Phone"><span className="miniIcon">☎</span></a><a href="#home" title="Back to top">↑</a></div>
+    {showFloatingActions && <div className="floatingActions" aria-label="Quick contact actions">
+      <button type="button" onClick={openWhatsApp} title="WhatsApp" aria-label="Open WhatsApp"><WhatsAppIcon /></button>
+      <button type="button" onClick={callCommittee} title="Call 9705422807" aria-label="Call 9705422807"><PhoneIcon /></button>
+      <button type="button" onClick={backToTop} title="Back to top" aria-label="Back to top"><UpIcon /></button>
+    </div>}
     {committeeOpen && <Modal type="committee" onClose={() => setCommitteeOpen(false)}/>} {donorOpen && <Modal type="donors" onClose={() => setDonorOpen(false)}/>} {expenseOpen && <Modal type="expense" onClose={() => setExpenseOpen(false)}/>} 
   </>;
 }
