@@ -10,15 +10,15 @@ export const content = {
   },
   committee: [
     ['अध्यक्ष', 'Devendra Yadav', '/assets/committee/devendra-yadav.jpg'],
-    ['वरिष्ठ उपाध्यक्ष', '[नाम थप्नुहोस्]', ''],
-    ['उपाध्यक्ष', '[नाम थप्नुहोस्]', ''],
-    ['महासचिव', '[नाम थप्नुहोस्]', ''],
-    ['सचिव', '[नाम थप्नुहोस्]', ''],
-    ['सहसचिव', '[नाम थप्नुहोस्]', ''],
-    ['कोषाध्यक्ष', '[नाम थप्नुहोस्]', ''],
-    ['सह–कोषाध्यक्ष', '[नाम थप्नुहोस्]', ''],
-    ['कार्यक्रम संयोजक', '[नाम थप्नुहोस्]', ''],
-    ['सदस्य', '[नाम थप्नुहोस्]', '']
+    ['वरिष्ठ उपाध्यक्ष', '[नाम थप्नुहोस्]', '/assets/committee/committee-member-default.jpg'],
+    ['उपाध्यक्ष', '[नाम थप्नुहोस्]', '/assets/committee/committee-member-default.jpg'],
+    ['महासचिव', '[नाम थप्नुहोस्]', '/assets/committee/committee-member-default.jpg'],
+    ['सचिव', '[नाम थप्नुहोस्]', '/assets/committee/committee-member-default.jpg'],
+    ['सहसचिव', '[नाम थप्नुहोस्]', '/assets/committee/committee-member-default.jpg'],
+    ['कोषाध्यक्ष', '[नाम थप्नुहोस्]', '/assets/committee/committee-member-default.jpg'],
+    ['सह–कोषाध्यक्ष', '[नाम थप्नुहोस्]', '/assets/committee/committee-member-default.jpg'],
+    ['कार्यक्रम संयोजक', '[नाम थप्नुहोस्]', '/assets/committee/committee-member-default.jpg'],
+    ['सदस्य', '[नाम थप्नुहोस्]', '/assets/committee/committee-member-default.jpg']
   ],
   donors: [
     ['Saraswati', '[Donor Name 01]', '/assets/donors/saraswati-01.jpg'],
