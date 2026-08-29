@@ -33,13 +33,13 @@ export const content = {
     ['Laxmi', '[Donor Name 15]', '/assets/donors/laxmi-02.png'],
   ],
   program: [
-    ['Day 01', 'Preparation & Purification', 'Temple and puja space preparation, cleaning and sacred arrangements.'],
-    ['Day 02', 'Kalash Sthapana', 'Traditional kalash installation and opening rituals for the festival.'],
-    ['Day 03', 'Community Prayer', 'Collective prayer, devotional gathering and preparation for the main puja.'],
-    ['Day 04', 'Laxmi Puja', 'Main worship of Goddess Laxmi with family and community participation.'],
-    ['Day 05', 'Aarti & Prasad', 'Collective aarti, blessings and prasad distribution for devotees.'],
-    ['Day 06', 'Cultural Evening', 'Music, cultural presentations and community celebration.'],
-    ['Day 07', 'Closing & Gratitude', 'Final prayer, volunteer appreciation and closing of the Mahotsav.']
+    ['Kartik 17, 2083', 'Grand Opening & Idol Installation', 'Ganesh Puja and Kalash Sthapana; arrival and welcome of Goddess Laxmi’s idol; formal opening of the Puja ceremony; prasad distribution.', '🪔'],
+    ['Kartik 18, 2083', 'Religious & Bhajan–Kirtan Program', 'Daily puja and aarti; devotional bhajan–kirtan; religious discourse; prasad distribution.', '🕉️'],
+    ['Kartik 19, 2083', 'Mehendi & Women / Children Special Program', 'Mehendi program; fun activities for children; women-focused activities; cultural presentation.', '🌸'],
+    ['Kartik 20, 2083', 'Cultural Program', 'Performances by local artists; dance and singing; cultural programs; entertaining presentations.', '🎤'],
+    ['Kartik 21, 2083', 'Lamp Lighting & Laxmi Puja Eve', 'Special lamp lighting; bhajan–kirtan and aarti; religious and cultural activities; special Laxmi Puja eve program.', '🪔'],
+    ['Kartik 22, 2083', 'Main Laxmi Puja & Deepawali', 'Special Laxmi Puja; Maha Aarti; lamp lighting; bhajan–kirtan; prasad distribution; special Deepawali cultural program.', '✨'],
+    ['Kartik 23, 2083', 'Closing Ceremony & Felicitation', 'Special puja and aarti; recognition of volunteers and supporters; awards and certificates; vote of thanks; closing ceremony; prasad distribution.', '🎉']
   ],
   donation: { account: 'Devendra Yadav', bank: 'ewes', number: '9705422807', wallet: '9705422807', phone: '9705422807' },
   memories: ['2082 / 2025', '2081 / 2024', '2080 / 2023', '2079 / 2022', '2078 / 2021', '2077 / 2020', '2076 / 2019', '2075 / 2018', '2074 / 2017'],
