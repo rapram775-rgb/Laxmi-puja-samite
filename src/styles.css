@@ -18,3 +18,19 @@
 
 .proofUpload input[type="file"]{padding:9px;border-style:dashed;background:#fffaf5;cursor:pointer}.uploadHint{font-size:10px;color:var(--muted);font-weight:500}.proofPreview{display:flex;align-items:center;gap:12px;padding:10px;border:1px solid var(--line);border-radius:12px;background:#fffaf5}.proofPreview img{width:58px;height:58px;object-fit:cover;border-radius:8px;border:1px solid rgba(215,169,27,.35)}.proofPreview span{font-size:11px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.donationQr{display:block;width:230px;height:230px;object-fit:contain}.qrCard .qrFrame{box-shadow:0 8px 25px rgba(0,0,0,.12)}
 @media(max-width:560px){.donationQr{width:190px;height:190px}}
+
+/* Donation QR + payment-proof refinements */
+.qrCard{justify-content:flex-start;gap:0;padding:32px 34px 28px}
+.qrIntro{width:100%;max-width:480px;text-align:center}
+.qrIntro h3{font-size:clamp(30px,3vw,40px);line-height:1.1;margin:8px 0 10px}
+.qrIntro p{margin:0 auto 20px;max-width:430px}
+.qrCard .qrFrame{display:flex;flex-direction:column;align-items:center;gap:12px;padding:16px 16px 13px;margin:0 auto 24px;border-radius:18px}
+.donationQr{width:220px;height:220px}
+.qrScanHint{font-size:11px;color:#756b64;font-weight:700;line-height:1.35}
+.qrCard .bankDetails{margin-top:0}
+.proofUpload{position:relative}
+.uploadError{font-size:11px;color:#a32929;font-weight:700}
+.proofPreview{align-items:center}
+.proofPreview div{display:grid;gap:2px;min-width:0}
+.proofPreview strong{font-size:11px;color:var(--wine)}
+@media(max-width:560px){.qrCard{padding:26px 18px 22px}.qrCard .qrFrame{margin-bottom:20px}.donationQr{width:190px;height:190px}.qrIntro h3{font-size:30px}}
