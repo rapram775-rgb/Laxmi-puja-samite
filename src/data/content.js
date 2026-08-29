@@ -9,16 +9,16 @@ export const content = {
     text: 'Shree Laxmi Puja Committee brings families and the wider community together through worship, cultural traditions, service and shared celebration. The committee works to preserve the spirit of Laxmi Puja while creating a welcoming and meaningful festival for every generation.'
   },
   committee: [
-    ['अध्यक्ष', '[नाम थप्नुहोस्]'],
-    ['वरिष्ठ उपाध्यक्ष', '[नाम थप्नुहोस्]'],
-    ['उपाध्यक्ष', '[नाम थप्नुहोस्]'],
-    ['महासचिव', '[नाम थप्नुहोस्]'],
-    ['सचिव', '[नाम थप्नुहोस्]'],
-    ['सहसचिव', '[नाम थप्नुहोस्]'],
-    ['कोषाध्यक्ष', '[नाम थप्नुहोस्]'],
-    ['सह–कोषाध्यक्ष', '[नाम थप्नुहोस्]'],
-    ['कार्यक्रम संयोजक', '[नाम थप्नुहोस्]'],
-    ['सदस्य', '[नाम थप्नुहोस्]']
+    ['अध्यक्ष', 'Devendra Yadav', '/assets/committee/devendra-yadav.jpg'],
+    ['वरिष्ठ उपाध्यक्ष', '[नाम थप्नुहोस्]', ''],
+    ['उपाध्यक्ष', '[नाम थप्नुहोस्]', ''],
+    ['महासचिव', '[नाम थप्नुहोस्]', ''],
+    ['सचिव', '[नाम थप्नुहोस्]', ''],
+    ['सहसचिव', '[नाम थप्नुहोस्]', ''],
+    ['कोषाध्यक्ष', '[नाम थप्नुहोस्]', ''],
+    ['सह–कोषाध्यक्ष', '[नाम थप्नुहोस्]', ''],
+    ['कार्यक्रम संयोजक', '[नाम थप्नुहोस्]', ''],
+    ['सदस्य', '[नाम थप्नुहोस्]', '']
   ],
   donors: [
     ['Saraswati', '[Donor Name 01]', '/assets/donors/saraswati-01.jpg'],
