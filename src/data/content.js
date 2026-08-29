@@ -6,7 +6,7 @@ export const content = {
     location: '[Festival Location]'
   },
   about: {
-    text: 'Shree Laxmi Puja Committee brings families and the wider community together through worship, cultural traditions, service and shared celebration. The committee works to preserve the spirit of Laxmi Puja while creating a welcoming and meaningful festival for every generation.'
+    text: 'We, the youth of Rajbiraj–1, Chanaura, Rampur, have been organizing the Shree Laxmi Puja continuously for the past several years. For us, this is not merely a religious event; it is a celebration of our faith, culture, traditions, harmony, and social unity.'
   },
   committee: [
     ['अध्यक्ष', 'Devendra Yadav', '/assets/committee/devendra-yadav.jpg'],

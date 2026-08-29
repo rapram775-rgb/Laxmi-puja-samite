@@ -54,7 +54,10 @@ function App() {
   const visibleDonors = useMemo(() => showAllDonors ? c.donors : c.donors.slice(0,10), [showAllDonors]);
 
   useEffect(() => {
-    const onScroll = () => setShowFloatingActions(window.scrollY > 80);
+    const onScroll = () => {
+      const threshold = Math.max(220, Math.floor(window.innerHeight * 0.72));
+      setShowFloatingActions(window.scrollY > threshold);
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -84,11 +87,28 @@ function App() {
         <div className="container heroInner"><div className="heroText"><span className="eyebrow">Faith • Prosperity • Community</span><h1>Shree Laxmi<br/><em>Puja Mahotsav</em></h1><p>{c.hero.tagline}</p><div className="heroMeta"><span><span className="miniIcon">▣</span> {c.hero.date}</span><span><span className="miniIcon">⌖</span> {c.hero.location}</span></div><div className="heroActions"><a className="btn gold" href="#program">Explore Program <span className="arrow">→</span></a><a className="btn ghost" href="#donation">Support the Puja</a></div></div><div className="heroLogo"><div className="logoAura"></div><div className="chakraSpin" aria-hidden="true"></div><img src={logo} alt="Goddess Laxmi illustration"/><span className="blinkLid blinkLeft" aria-hidden="true"></span><span className="blinkLid blinkRight" aria-hidden="true"></span><div className="heroBadge">Shree Laxmi<br/><strong>Mahotsav</strong></div></div></div>
       </section>
 
-      <Section id="about" eyebrow="Tradition • Faith • Service" title="About Our Puja" subtitle="A celebration built around devotion, heritage and community."><div className="aboutGrid"><div className="aboutVisual"><Photo label="Photos"/><div className="aboutStamp"><span className="miniIcon">♥</span><span>Since<br/><b>[Year]</b></span></div></div><div className="aboutCopy"><p>{c.about.text}</p><div className="featureGrid"><div><span className="miniIcon">♥</span><h3>Collective Worship</h3><p>A shared spiritual experience for families and devotees.</p></div><div><span className="miniIcon">⌂</span><h3>Living Tradition</h3><p>Keeping cultural and religious practices meaningful.</p></div><div><span className="miniIcon">♙</span><h3>Community</h3><p>Bringing generations together through participation.</p></div><div><span className="miniIcon">◷</span><h3>Festival Spirit</h3><p>Rituals, aarti, prasad and cultural celebration.</p></div></div></div></div></Section>
+      <Section id="about" eyebrow="Tradition • Faith • Service" title="Rooted in Tradition, United as a Community" subtitle="A shared tradition carried forward through faith, culture, unity and collective effort.">
+        <div className="aboutGrid">
+          <div className="aboutVisual">
+            <img className="aboutPhoto" src="/assets/about-puja.png" alt="Shree Laxmi Puja celebration" loading="lazy" />
+          </div>
+          <div className="aboutCopy">
+            <p>We, the youth of Rajbiraj–1, Chanaura, Rampur, have been organizing the Shree Laxmi Puja continuously for the past several years. For us, this is not merely a religious event; it is a celebration of our faith, culture, traditions, harmony, and social unity.</p>
+            <p>Every year, we strive to make the Puja more organized, meaningful, and memorable than the year before. Supported by voluntary contributions and donations from our village and community, this celebration is not the initiative of any individual, but a shared effort and collective celebration of our entire community.</p>
+            <p>Our purpose is to preserve and pass our religious and cultural traditions on to the younger generation, strengthen brotherhood and unity within our society, and build a distinct sense of identity and pride for our Rampur community.</p>
+            <p>What began as a humble effort has now grown into a cherished tradition of our community, carried forward with peace, discipline, mutual respect, and collective spirit. With the continued support, blessings, and participation of everyone, we remain committed to making this tradition more meaningful, dignified, and memorable in the years to come.</p>
+            <div className="aboutClosing">
+              <h3>This is not just Laxmi Puja—</h3>
+              <p>it is our faith, our culture, our unity, and our identity. 🙏</p>
+              <strong>Jai Mata Laxmi.</strong>
+            </div>
+          </div>
+        </div>
+      </Section>
 
-      <Section id="committee" eyebrow="Leadership • Service • Teamwork" title="Our Committee" subtitle="Meet the ten principal committee members who lead, organize and serve the Shree Laxmi Puja Mahotsav."><div className="committeeGrid">{c.committee.map(([role,name,image],i)=><article className="memberCard" key={i}>{image ? <div className="memberPhoto"><img src={image} alt={`${name} — ${role}`} loading="lazy"/></div> : <Photo label="Photos"/>}<div className="memberInfo"><span className="memberMeta">{role}</span><h3>{name}</h3><p>puja Committee</p></div></article>)}</div><div className="centerAction"><button className="btn outlineDark" type="button" onClick={() => setCommitteeOpen(true)}>सदस्यहरू <span className="arrow">→</span></button></div></Section>
+      <Section id="committee" eyebrow="Leadership • Service • Teamwork" title="Our Committee" subtitle="Meet the ten principal committee members who lead, organize and serve the Shree Laxmi Puja Mahotsav."><div className="committeeGrid">{c.committee.map(([role,name,image],i)=><article className="memberCard" key={i}>{image ? <div className="memberPhoto"><img src={image} alt={`${name} — ${role}`} loading="lazy"/></div> : <Photo label="Photos"/>}<div className="memberInfo"><strong className="memberRole">{role}</strong><h3>{name}</h3></div></article>)}</div><div className="centerAction"><button className="btn outlineDark" type="button" onClick={() => setCommitteeOpen(true)}>सदस्यहरू <span className="arrow">→</span></button></div></Section>
 
-      <Section id="donor" eyebrow="Gratitude • Respect • Support" title="Our Donors" subtitle="Every contribution helps keep the festival welcoming, meaningful and sustainable."><div className="donorGrid">{visibleDonors.map(([deity,post,name,image],i)=><article className="donorCard" key={i}><div className="deityPhoto"><img src={image} alt={`${deity} deity`} loading="lazy"/><span className="deityTag">{deity}</span></div><div className="donorInfo"><span>Post: {post}</span><h3>Name: {name}</h3><p>puja Committee</p></div></article>)}</div><div className="centerAction">{!showAllDonors && <button className="btn outlineDark" onClick={() => setShowAllDonors(true)}>See More <span className="arrow">⌄</span></button>}{showAllDonors && <button className="btn outlineDark" onClick={() => setShowAllDonors(false)}>Show Less <span className="arrow rotate">⌄</span></button>}</div></Section>
+      <Section id="donor" eyebrow="Gratitude • Respect • Support" title="Our Donors" subtitle="Every contribution helps keep the festival welcoming, meaningful and sustainable."><div className="donorGrid">{visibleDonors.map(([deity,post,name,image],i)=><article className="donorCard" key={i}><div className="deityPhoto"><img src={image} alt={`${deity} deity`} loading="lazy"/><span className="deityTag">{deity}</span></div><div className="donorInfo"><span>{post}</span><h3>{name}</h3><p>puja Committee</p></div></article>)}</div><div className="centerAction">{!showAllDonors && <button className="btn outlineDark" onClick={() => setShowAllDonors(true)}>See More <span className="arrow">⌄</span></button>}{showAllDonors && <button className="btn outlineDark" onClick={() => setShowAllDonors(false)}>Show Less <span className="arrow rotate">⌄</span></button>}</div></Section>
 
       <Section id="program" eyebrow="Schedule • Rituals • Celebration" title="Our Program" subtitle="Seven days of devotion, culture, celebration and community togetherness."><div className="programList">{c.program.map(([date,title,desc,icon],i)=><article className="programItem" key={i}><div className="programDate"><strong>{date}</strong></div><div className="programBody"><div className="programContent"><span className="programIcon" aria-hidden="true">{icon}</span><div><span className="eyebrow">{date}</span><h3>{title}</h3><p>{desc}</p></div></div><span className="programPlace" aria-label="Program symbol">{icon}</span></div></article>)}</div></Section>
 
