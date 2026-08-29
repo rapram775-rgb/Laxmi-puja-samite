@@ -92,3 +92,27 @@
 .donorInfoFinal>span,.donorInfoFinal h3,.donorInfoFinal p{width:100%;display:block;text-align:center!important}
 @media(max-width:800px){.aboutGridUpdated .aboutVisual{min-height:420px}.aboutPujaImage{min-height:420px}.aboutGridUpdated .aboutCopy>p{font-size:15px;line-height:1.75}.aboutClosing h3{font-size:25px}.aboutClosing p{font-size:21px}}
 @media(max-width:560px){.aboutGridUpdated .aboutVisual{min-height:330px}.aboutPujaImage{min-height:330px;border-radius:18px}}
+
+/* Premium Committee Cards — isolated to the Committee section */
+.premiumCommitteeGrid{gap:22px;align-items:stretch}
+.premiumMemberCard{position:relative;overflow:visible;background:linear-gradient(180deg,#fffdf9 0%,#fffaf3 100%);border:1px solid rgba(178,132,28,.18);border-radius:22px;box-shadow:0 12px 30px rgba(66,37,18,.08);padding-bottom:18px;transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+.premiumMemberCard:hover{transform:translateY(-7px);box-shadow:0 20px 45px rgba(66,37,18,.15);border-color:rgba(215,169,27,.42)}
+.premiumMemberCard .memberPhoto{height:265px;margin:10px 10px 0;border-radius:17px 17px 42% 42% / 17px 17px 16% 16%;overflow:hidden;background:linear-gradient(145deg,#eee3d4,#fffaf2);border:2px solid rgba(215,169,27,.38);position:relative}
+.premiumMemberCard .memberPhoto:after{content:"";position:absolute;inset:7px;border:1px solid rgba(255,255,255,.55);border-radius:12px 12px 38% 38% / 12px 12px 13% 13%;pointer-events:none}
+.premiumMemberCard .memberPhoto img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 28%;transition:transform .45s ease}
+.premiumMemberCard:hover .memberPhoto img{transform:scale(1.035)}
+.premiumMemberCard .memberPhoto .photoPlaceholder{height:100%;border:0;border-radius:0;background:linear-gradient(145deg,#efe5d7,#fffaf2)}
+.memberIcon{position:relative;z-index:3;width:56px;height:56px;margin:-29px auto 0;border-radius:50%;display:grid;place-items:center;background:var(--wine);color:var(--gold2);border:4px solid #fffaf2;box-shadow:0 6px 16px rgba(45,20,10,.16),0 0 0 1px rgba(215,169,27,.55);font-family:Georgia,serif;font-size:25px;line-height:1}
+.premiumMemberCard .memberInfo{padding:13px 12px 0;text-align:center}
+.premiumMemberCard .memberRole{display:inline-flex;align-items:center;justify-content:center;min-height:31px;padding:5px 15px;border-radius:999px;background:var(--wine);color:#fff8ef;font-size:12px;font-weight:800;letter-spacing:.01em;box-shadow:0 5px 12px rgba(74,16,22,.13);white-space:nowrap;max-width:100%}
+.premiumMemberCard .memberInfo h3{margin:11px 0 8px;color:var(--wine);font-family:'Playfair Display',serif;font-size:18px;line-height:1.2;white-space:normal;overflow-wrap:anywhere}
+.memberOrnament{display:flex;align-items:center;justify-content:center;gap:7px;height:12px;color:var(--gold);margin-top:2px}
+.memberOrnament i{display:block;width:30px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.memberOrnament i:last-child{background:linear-gradient(90deg,var(--gold),transparent)}
+.memberOrnament b{font-size:11px;font-weight:700;line-height:1}
+@media(max-width:1050px){.premiumCommitteeGrid{grid-template-columns:repeat(3,1fr)}.premiumMemberCard .memberPhoto{height:270px}}
+@media(max-width:800px){.premiumCommitteeGrid{grid-template-columns:repeat(2,1fr);gap:16px}.premiumMemberCard .memberPhoto{height:250px}}
+@media(max-width:560px){.premiumCommitteeGrid{grid-template-columns:1fr;gap:18px}.premiumMemberCard{max-width:390px;width:100%;margin-inline:auto}.premiumMemberCard .memberPhoto{height:330px;margin:9px 9px 0}.premiumMemberCard .memberInfo{padding-top:13px}.premiumMemberCard .memberInfo h3{font-size:22px}.premiumMemberCard .memberRole{font-size:13px;min-height:33px;padding-inline:17px}.memberIcon{width:58px;height:58px;margin-top:-30px}}
+/* Keep the same visual scale across every premium committee card. */
+.premiumMemberCard:first-child .memberInfo h3{font-size:18px;margin-top:11px}
+@media(max-width:560px){.premiumMemberCard:first-child .memberInfo h3{font-size:22px}}
