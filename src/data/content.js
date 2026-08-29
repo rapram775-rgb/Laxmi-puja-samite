@@ -6,7 +6,7 @@ export const content = {
     location: '[Festival Location]'
   },
   about: {
-    text: 'We, the youth of Rajbiraj–1, Chanaura, Rampur, have been organizing the Shree Laxmi Puja continuously for the past several years. For us, this is not merely a religious event; it is a celebration of our faith, culture, traditions, harmony, and social unity.'
+    text: 'Shree Laxmi Puja Committee brings families and the wider community together through worship, cultural traditions, service and shared celebration. The committee works to preserve the spirit of Laxmi Puja while creating a welcoming and meaningful festival for every generation.'
   },
   committee: [
     ['अध्यक्ष', 'Devendra Yadav', '/assets/committee/devendra-yadav.jpg'],
@@ -21,21 +21,21 @@ export const content = {
     ['सदस्य', '[नाम थप्नुहोस्]', '']
   ],
   donors: [
-    ['Saraswati', 'अध्यक्ष', 'Devendra Yadav', '/assets/donors/saraswati-01.jpg'],
-    ['Saraswati', 'वरिष्ठ उपाध्यक्ष', '[ NAME ]', '/assets/donors/saraswati-02.jpg'],
-    ['Ganesh', 'उपाध्यक्ष', '[ NAME ]', '/assets/donors/ganesh-01.png'],
-    ['Vishnu', 'महासचिव', '[ NAME ]', '/assets/donors/vishnu-01.jpg'],
-    ['Shiva & Parvati', 'सचिव', '[ NAME ]', '/assets/donors/shiva-parvati-01.png'],
-    ['Shani', 'सहसचिव', '[ NAME ]', '/assets/donors/shani-01.jpg'],
-    ['Ganesh', 'कोषाध्यक्ष', '[ NAME ]', '/assets/donors/ganesh-02.png'],
-    ['Krishna', 'सह–कोषाध्यक्ष', '[ NAME ]', '/assets/donors/krishna-01.jpg'],
-    ['Laxmi', 'कार्यक्रम संयोजक', '[ NAME ]', '/assets/donors/laxmi-01.jpg'],
-    ['Hanuman', 'सदस्य', '[ NAME ]', '/assets/donors/hanuman-01.jpg'],
-    ['Durga', 'सदस्य', '[ NAME ]', '/assets/donors/durga-01.jpg'],
-    ['Ram', 'सदस्य', '[ NAME ]', '/assets/donors/ram-01.jpg'],
-    ['Shiva', 'सदस्य', '[ NAME ]', '/assets/donors/shiva-01.png'],
-    ['Kali', 'सदस्य', '[ NAME ]', '/assets/donors/kali-01.jpg'],
-    ['Laxmi', 'सदस्य', '[ NAME ]', '/assets/donors/laxmi-02.png'],
+    ['Saraswati', '[Donor Name 01]', '/assets/donors/saraswati-01.jpg'],
+    ['Sita', '[Donor Name 02]', '/assets/donors/saraswati-02.jpg'],
+    ['Ganesh', '[Donor Name 03]', '/assets/donors/ganesh-01.png'],
+    ['Vishnu', '[Donor Name 04]', '/assets/donors/vishnu-01.jpg'],
+    ['Shiva & Parvati', '[Donor Name 05]', '/assets/donors/shiva-parvati-01.png'],
+    ['Shani', '[Donor Name 06]', '/assets/donors/shani-01.jpg'],
+    ['Ganesh', '[Donor Name 07]', '/assets/donors/ganesh-02.png'],
+    ['Krishna', '[Donor Name 08]', '/assets/donors/krishna-01.jpg'],
+    ['Narayan', '[Donor Name 09]', '/assets/donors/laxmi-01.jpg'],
+    ['Hanuman', '[Donor Name 10]', '/assets/donors/hanuman-01.jpg'],
+    ['Durga', '[Donor Name 11]', '/assets/donors/durga-01.jpg'],
+    ['Ram', '[Donor Name 12]', '/assets/donors/ram-01.jpg'],
+    ['Shiva', '[Donor Name 13]', '/assets/donors/shiva-01.png'],
+    ['Kali', '[Donor Name 14]', '/assets/donors/kali-01.jpg'],
+    ['Laxmi', '[Donor Name 15]', '/assets/donors/laxmi-02.png'],
   ],
   program: [
     ['Kartik 17, 2083', 'Grand Opening & Idol Installation', 'Ganesh Puja and Kalash Sthapana; arrival and welcome of Goddess Laxmi’s idol; formal opening of the Puja ceremony; prasad distribution.', '🪔'],
