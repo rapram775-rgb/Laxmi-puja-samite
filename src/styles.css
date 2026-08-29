@@ -39,3 +39,16 @@
 .programDate strong { display: inline-flex; align-items: center; min-height: 42px; font-weight: 800; letter-spacing: .02em; }
 .programPlace { font-size: 2rem; line-height: 1; }
 @media (max-width: 720px) { .programDate strong { min-height: 36px; } .programPlace { font-size: 1.6rem; } }
+
+
+/* Hero devotional animation: natural eye blink + slow rotating chakra behind Goddess Laxmi. */
+.heroLogo{position:relative;isolation:isolate}
+.heroLogo .logoAura{z-index:0}
+.heroLogo>img{position:relative;z-index:2}
+.chakraSpin{position:absolute;z-index:1;left:50%;top:37%;width:62%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;opacity:.9;background:repeating-conic-gradient(from 0deg,rgba(242,190,39,.95) 0deg 2deg,transparent 2deg 12deg);-webkit-mask:radial-gradient(circle,transparent 0 67%,#000 68% 71%,transparent 72%);mask:radial-gradient(circle,transparent 0 67%,#000 68% 71%,transparent 72%);animation:chakraRotate 18s linear infinite}
+.blinkLid{position:absolute;z-index:4;pointer-events:none;left:44%;top:32.4%;width:6.4%;height:4.2%;border-radius:50%;opacity:0;transform:scaleY(.05);transform-origin:center;background:radial-gradient(ellipse at center,#f6ad96 0 57%,#e99682 62%,transparent 72%);filter:drop-shadow(0 1px 1px rgba(85,25,15,.25));animation:eyeBlink 5.8s ease-in-out infinite}
+.blinkRight{left:54%;animation-delay:.08s}
+@keyframes eyeBlink{0%,88%,100%{opacity:0;transform:scaleY(.05)}90%{opacity:1;transform:scaleY(1)}91.5%{opacity:1;transform:scaleY(.9)}93%{opacity:0;transform:scaleY(.05)}}
+@keyframes chakraRotate{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.blinkLid,.chakraSpin{animation:none}.blinkLid{display:none}}
+@media(max-width:560px){.chakraSpin{width:64%;top:37%}.blinkLid{top:32.4%;width:6.6%;height:4.4%}}
